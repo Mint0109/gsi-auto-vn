@@ -11,6 +11,7 @@ env:
   BUILD_AONLY: false
   ROM_AONLY: test.7z
   ROM_AB: MasikAB2707.7z
+  ROM_txt: *-AB-*.txt
 
 jobs:
   build:
@@ -76,7 +77,6 @@ jobs:
               curl -sL https://git.io/file-transfer | sh
               ./transfer bit $ROM_AB
        - name: upload AB info
-         run: |
-               cd ErfanGSIs/output
+         if: env.BUILD_AB == 'true'
                curl -sL https://git.io/file-transfer | sh
-              ./transfer bit *-AB-*.txt
+              ./transfer bit $ROM_txt
