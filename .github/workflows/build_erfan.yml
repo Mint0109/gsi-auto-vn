@@ -5,12 +5,12 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://android.googleapis.com/packages/ota-api/vsmart_v620a_v620aopen/f43a5601e88c83632682717a5a45c933f959feb3.zip
-  ROM_NAME: VOS
+  ROM_URL: https://mpl1.androidfilehost.com/dl/Og9WYV9Exd1mYpjbYfM7_A/1595921253/8889791610682897352/Masik+P+Tucana.zip
+  ROM_NAME: MIUI
   BUILD_AB: true
   BUILD_AONLY: false
-  ROM_AONLY: Vos_A.7z
-  ROM_AB: VosAB_2507.7z
+  ROM_AONLY: test.7z
+  ROM_AB: MasikAB2707.7z
 
 jobs:
   build:
@@ -75,3 +75,8 @@ jobs:
          run: |
               curl -sL https://git.io/file-transfer | sh
               ./transfer bit $ROM_AB
+       - name: upload AB info
+         run: |
+               cd ErfanGSIs/output
+               curl -sL https://git.io/file-transfer | sh
+              ./transfer bit *-AB-*.txt
