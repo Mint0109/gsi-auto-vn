@@ -6,7 +6,7 @@ on:
     
 env:
   ROM_URL: https://android.googleapis.com/packages/ota-api/vsmart_v620a_v620aopen/f43a5601e88c83632682717a5a45c933f959feb3.zip
-  ROM_NAME: test.zip
+  ROM_NAME: test.7z
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -43,7 +43,7 @@ jobs:
          run: sudo ./JvlongGSIs/make.sh $ROM_URL Generic
         
        - name: 7z AB GSI
-         run: 7za a -t7z -r JvlongGSIs/output/*JvlongGSI-AB*.img
+         run: 7za a -t7z -r $ROM_NAME JvlongGSIs/output/*JvlongGSI-AB*.img
        - name: Upload AB GSI to WeTransfer
          run: |
               curl -sL https://git.io/file-transfer | sh
