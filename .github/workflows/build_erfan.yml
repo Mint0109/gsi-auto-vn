@@ -6,7 +6,6 @@ on:
     
 env:
   ROM_URL: https://android.googleapis.com/packages/ota-api/vsmart_v620a_v620aopen/f43a5601e88c83632682717a5a45c933f959feb3.zip
-  ROM_NAME: Generic
   BUILD_AB: true
   BUILD_AONLY: false
   ROM_AONLY: Vos_A.7z
@@ -46,7 +45,7 @@ jobs:
        
        - name: Download Stock Rom & Generate Aonly GSI
          if: env.BUILD_AONLY == 'true'
-         run: sudo ./JvlongGSIs/make.sh -a $ROM_URL $ROM_NAME
+         run: sudo ./JvlongGSIs/make.sh -a $ROM_URL Generic
        
        - name: 7z Aonly GSI
          if: env.BUILD_AONLY == 'true'
@@ -64,7 +63,7 @@ jobs:
          
        - name: Download Stock Rom & Generate AB GSI
          if: env.BUILD_AB == 'true'
-         run: sudo ./JvlongGSIs/make.sh -b $ROM_URL $ROM_NAME
+         run: sudo ./JvlongGSIs/make.sh -b $ROM_URL Generic
 
        - name: 7z AB GSI
          if: env.BUILD_AB == 'true'
