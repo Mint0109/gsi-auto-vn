@@ -14,9 +14,9 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://oxygenos.oneplus.net/OnePlus6TOxygen_34_OTA_047_all_2007171912_3ac1d37aee4841a9.zip
-  ROM_NAME: OxygenOS
-  ZIP_NAME: OnePlus6T
+  ROM_URL: https://bigota.d.miui.com/V12.0.2.0.QJOINXM/miui_MERLININGlobal_V12.0.2.0.QJOINXM_5dd174679c_10.0.zip
+  ROM_NAME: MIUI
+  ZIP_NAME: RedmiNote9
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
@@ -42,7 +42,7 @@ jobs:
             sudo -E apt-get -qq install git openjdk-8-jdk wget
        
        - name: Clone ErfanGSI Source Code
-         run: git clone --recurse-submodules https://github.com/erfanoabdi/ErfanGSIs
+         run: git clone --recurse-submodules https://github.com/leeminh888/ErfanGSIs
        
        - name: Setting up ErfanGSI requirements
          run: |
