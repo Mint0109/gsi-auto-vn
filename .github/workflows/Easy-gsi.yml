@@ -14,9 +14,9 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://get.hentaios.com/download_full_build?token=8e5c200060e9c9b6fa05a81f58503342ccb2587bb01d332eacf7d085b5806455
-  ROM_NAME: Generic
-  ZIP_NAME: RedmiNote7
+  ROM_URL: https://downloads.sourceforge.net/project/rmx1851/custom_recovery_StockROM_flashable_files/RMX1851CN_flashable_A06.zip?r=&ts=1599361941&use_mirror=master
+  ROM_NAME: ColorOS
+  ZIP_NAME: RealmeUi
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
