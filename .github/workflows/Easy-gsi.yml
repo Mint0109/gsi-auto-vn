@@ -1,4 +1,4 @@
-name: Easy GSI..
+name: Building GSI..
 
 on:
 #  release:
@@ -14,11 +14,11 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://downloads.sourceforge.net/project/rmx1851/custom_recovery_StockROM_flashable_files/RMX1851CN_flashable_A06.zip?r=&ts=1599361941&use_mirror=master
-  ROM_NAME: ColorOS
-  ZIP_NAME: RealmeUi
+  ROM_URL: https://bigota.d.miui.com/V11.0.2.0.QFGCNXM/miui_LAVENDER_V11.0.2.0.QFGCNXM_f1ece786cf_10.0.zip
+  ROM_NAME: MIUI
+  ZIP_NAME: testokbye
   TZ: Asia/Kolkata
-  MIR: wet
+  MIR: bit
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,15 +26,6 @@ jobs:
     steps:
        - name: Checkout
          uses: actions/checkout@master
-       
-       - name: Clean Up
-         run: |
-           docker rmi `docker images -q`
-           sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php /etc/apt/sources.list.d
-           sudo -E apt-get -y purge azure-cli ghc* zulu* hhvm llvm* firefox google* dotnet* powershell openjdk* mysql* php*
-           sudo -E apt-get update
-           sudo -E apt-get -y autoremove --purge
-           sudo -E apt-get clean 
            
        - name: Initializing environment
          run: |
@@ -42,30 +33,32 @@ jobs:
             sudo -E apt-get -qq install git openjdk-8-jdk wget
        
        - name: Clone ErfanGSI Source Code
-         run: git clone --recurse-submodules https://github.com/leeminh888/ErfanGSIs
+         run: git clone --recurse-submodules https://github.com/JamieHoSzeYui/ErfanGSIs -b curtana
        
        - name: Setting up ErfanGSI requirements
          run: |
               sudo chmod -R 777 ErfanGSIs
               cd ErfanGSIs
               sudo bash setup.sh
+              rm -rf roms/10/MIUI/debloat.sh
        
        - name: Download Stock Rom & Generate GSI
-         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME
+         run: |
+              cd ErfanGSIs
+              sudo ./url2GSI.sh $ROM_URL $ROM_NAME
+              
        
        - name: Zip Aonly and upload 
          run: |
               mkdir final
               sudo chmod -R 777 ErfanGSIs/output
-              cd ErfanGSIs/output
-              zip -r $ZIP_NAME-GSI-Aonly.7z *-Aonly-*.img
+              zip -r ErfanGSIs/output/$ZIP_NAME-GSI-Aonly.7z ErfanGSIs/output/*-Aonly-*.img
               curl -sL https://git.io/file-transfer | sh
-              ./transfer $MIR $ZIP_NAME-GSI-Aonly.7z          
+              ./transfer $MIR ErfanGSIs/output/$ZIP_NAME-GSI-Aonly.7z          
        - name: Zip AB and upload 
          run: |
-              cd ErfanGSIs/output
-              zip -r $ZIP_NAME-GSI-AB.7z *-AB-*.img
-              ./transfer $MIR $ZIP_NAME-GSI-AB.7z      
+              zip -r ErfanGSIs/output/$ZIP_NAME-GSI-AB.7z ErfanGSIs/output/*-AB-*.img
+              ./transfer $MIR ErfanGSIs/output/$ZIP_NAME-GSI-AB.7z      
        - name: Print build info
          run: |
               cat ErfanGSIs/output/*-Aonly-*.txt
