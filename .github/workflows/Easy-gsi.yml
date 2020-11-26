@@ -18,7 +18,7 @@ env:
   ROM_NAME: MIUI
   ZIP_NAME: RMN7pro
   TZ: Asia/Kolkata
-  MIR: bit
+  MIR: wet
 jobs:
   build:
     runs-on: ubuntu-latest
