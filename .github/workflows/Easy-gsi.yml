@@ -14,7 +14,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://mor1.androidfilehost.com/dl/S0yHYhA6dSmAcIFIPgtcAA/1620882754/10763459528675586668/xiaomi.eu_multi_MI9SE_20.11.18_v12-10.zip
+  ROM_URL: https://udomain.dl.sourceforge.net/project/xiaomi-eu-multilang-miui-roms/xiaomi.eu/MIUI-STABLE-RELEASES/MIUIv12/xiaomi.eu_multi_MI9LiteMICC9_V12.0.2.0.QFCCNXM_v12-10.zip
   ROM_NAME: MIUI
   ZIP_NAME: Mi9se_test
   TZ: Asia/Kolkata
