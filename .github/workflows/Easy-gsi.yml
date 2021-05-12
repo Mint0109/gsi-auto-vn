@@ -33,21 +33,17 @@ jobs:
             sudo -E apt-get -qq install git openjdk-8-jdk wget
        
        - name: Clone ErfanGSI Source Code
-         run: git clone --recurse-submodules https://github.com/JamieHoSzeYui/ErfanGSIs -b curtana
+         run: git clone --recurse-submodules https://github.com/leeminh888/ErfanGSIs
        
        - name: Setting up ErfanGSI requirements
          run: |
               sudo chmod -R 777 ErfanGSIs
               cd ErfanGSIs
               sudo bash setup.sh
-              rm -rf roms/10/MIUI/debloat.sh
        
        - name: Download Stock Rom & Generate GSI
-         run: |
-              cd ErfanGSIs
-              sudo ./url2GSI.sh $ROM_URL $ROM_NAME
-              
-       
+         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME
+                  
        - name: Zip Aonly and upload 
          run: |
               mkdir final
