@@ -14,9 +14,9 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://bigota.d.miui.com/V12.0.4.0.QFAEUXM/miui_CEPHEUSEEAGlobal_V12.0.4.0.QFAEUXM_888770fbbe_10.0.zip
+  ROM_URL: https://mor1.androidfilehost.com/dl/S0yHYhA6dSmAcIFIPgtcAA/1620882754/10763459528675586668/xiaomi.eu_multi_MI9SE_20.11.18_v12-10.zip
   ROM_NAME: MIUI
-  ZIP_NAME: Mi9_test
+  ZIP_NAME: Mi9se_test
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
