@@ -14,7 +14,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://phoenixnap.dl.sourceforge.net/project/one-os/MI8Pro/OneOS_MI8Pro_20.11.17_v12-10.zip
+  ROM_URL: https://master.dl.sourceforge.net/project/revos/V12/Mi9Lite/ROS-MIUI_Mi9Lite_20.9.22_v12-10.zip?viasf=1
   ROM_NAME: MIUI
   ZIP_NAME: Mi9TPro_ons_os_test
   TZ: Asia/Kolkata
