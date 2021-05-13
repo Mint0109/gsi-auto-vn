@@ -14,7 +14,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://jaist.dl.sourceforge.net/project/one-os/Mi9TPro/OneOS_Mi9TPro_20.11.17_v12-10.zip
+  ROM_URL: https://mor1.androidfilehost.com/dl/UaQhi9wGqh-f_M0-yotvZw/1620980284/17248734326145681349/MMX_2.2.0_cepheus_20.12.9_v12-10.zip?
   ROM_NAME: MIUI
   ZIP_NAME: Mi9TPro_ons_os_test
   TZ: Asia/Kolkata
