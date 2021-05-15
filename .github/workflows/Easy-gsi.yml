@@ -14,7 +14,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://master.dl.sourceforge.net/project/revos/V12/Mi9Lite/ROS-MIUI_Mi9Lite_20.9.22_v12-10.zip?viasf=1
+  ROM_URL: https://versaweb.dl.sourceforge.net/project/revos/V12/MI9/ROS-MIUI_MI9_20.9.22_v12-10.zip
   ROM_NAME: MIUI
   ZIP_NAME: ROS-MIUI_Mi9Lite_20.9.22_v12-10
   TZ: Asia/Kolkata
