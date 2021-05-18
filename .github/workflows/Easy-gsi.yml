@@ -14,7 +14,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://doc-0s-8s-docs.googleusercontent.com/docs/securesc/etgo6h17v5a0oisgj4gf7g6k9ic6mnnr/imhv46c3jrabtek44krr0lu7opgobri6/1621338300000/17894125047618995741/12857377195139705938/1Oe08UlEsqTP7CRMesES3CYlsqUE0RP9s?e=download&authuser=0&nonce=n84lshmipv0v4&user=12857377195139705938&hash=urr078d4v2s64vhl6mc7pvmbh7h2t4i2
+  ROM_URL: https://drive.google.com/u/0/uc?export=download&confirm=UbSH&id=1Oe08UlEsqTP7CRMesES3CYlsqUE0RP9s
   ROM_NAME: MIUI
   ZIP_NAME: OneOSlevender21.4.22
   TZ: Asia/Kolkata
