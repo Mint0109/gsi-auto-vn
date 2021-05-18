@@ -14,9 +14,9 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://versaweb.dl.sourceforge.net/project/revos/V12/MI9/ROS-MIUI_MI9_20.9.22_v12-10.zip
+  ROM_URL: https://gdmbd.sasohan.workers.dev/AbhiX_ROG_Edition_v10_lavender_21.04.22.zip
   ROM_NAME: MIUI
-  ZIP_NAME: ROS-MIUI_MI9_20.9.22_v12-10
+  ZIP_NAME: AbhiX_ROG_Edition_v10_lavender_21.04.22
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
