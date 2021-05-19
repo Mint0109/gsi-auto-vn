@@ -14,9 +14,9 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://doc-0s-8s-docs.googleusercontent.com/docs/securesc/etgo6h17v5a0oisgj4gf7g6k9ic6mnnr/l82p2s6b8fcp7tgpsokndahm179dhvk0/1621384350000/17894125047618995741/12857377195139705938/1Oe08UlEsqTP7CRMesES3CYlsqUE0RP9s?e=download&authuser=0&nonce=86jc60ru62af0&user=12857377195139705938&hash=ofl3st1d1tp73556boaltkb1tms3fljf
+  ROM_URL: https://liquidtelecom.dl.sourceforge.net/project/teamphenom/lavender/weekly/XMORZ_MIUI12_lavender_20.11.25.zip
   ROM_NAME: MIUI
-  ZIP_NAME: OneOSlevender21.4.22
+  ZIP_NAME: XMORZ_MIUI12_lavender_20.11.25
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
