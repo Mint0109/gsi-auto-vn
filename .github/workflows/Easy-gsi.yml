@@ -14,8 +14,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://liquidtelecom.dl.sourceforge.net/project/teamphenom/lavender/weekly/XMORZ_MIUI12_lavender_20.11.25.zip
-  ROM_NAME: MIUI
+  ROM_URL: https://mirrorgang.techharz.workers.dev/MIUI-CAF_12.6_Beta_Lavender_21.4.14-v10.zip
   ZIP_NAME: XMORZ_MIUI12_lavender_20.11.25
   TZ: Asia/Kolkata
   MIR: wet
