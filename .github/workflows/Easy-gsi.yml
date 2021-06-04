@@ -14,8 +14,8 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://mirrorgang.techharz.workers.dev/MIUI-CAF_12.6_Beta_Lavender_21.4.14-v10.zip
-  ZIP_NAME: XMORZ_MIUI12_lavender_20.11.25
+  ROM_URL: https://ghost-mirror.hitesh920.workers.dev/0://Indian%20MiUi%20a11%20by%20Lucifer_morning_star_96.zip
+  ZIP_NAME: miui 12 test
   TZ: Asia/Kolkata
   MIR: wet
 jobs:
